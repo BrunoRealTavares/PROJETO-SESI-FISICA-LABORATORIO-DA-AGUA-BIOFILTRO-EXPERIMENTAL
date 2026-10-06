@@ -1,12 +1,26 @@
 # Laboratório Digital de Qualidade da Água & Biofiltro Experimental (ODS 6)
-
-Aplicação web desenvolvida em PHP para simulação de um laboratório digital de testes de qualidade da água. O sistema é capaz de calcular e classificar parâmetros físico-químicos com base nos padrões oficiais de potabilidade, calcular a taxa de eficiência de remoção do biofiltro experimental e validar toda a lógica de negócio por meio de testes unitários automatizados com **PHPUnit**.
-
-Este projeto está alinhado ao **Objetivo de Desenvolvimento Sustentável 6 (Água Potável e Saneamento)** da ONU e às normas da **Portaria GM/MS nº 888/2021** do Ministério da Saúde.
+> **Simulação de Testes Físico-Químicos e Eficiência de Filtragem**
+> Aplicação web desenvolvida em PHP para simulação de um laboratório digital de testes de qualidade da água. O sistema é capaz de calcular e classificar parâmetros físico-químicos com base nos padrões oficiais de potabilidade, calcular a taxa de eficiência de remoção do biofiltro experimental e validar toda a lógica de negócio por meio de testes unitários automatizados com **PHPUnit**.
+> 
+> Este projeto está alinhado ao **Objetivo de Desenvolvimento Sustentável 6 (Água Potável e Saneamento)** da ONU e às normas da **Portaria GM/MS nº 888/2021** do Ministério da Saúde.
 
 ---
 
-##  Tecnologias Utilizadas
+## Desenvolvedores & Contribuições
+
+* **Bruno Tavares** (`bruno.tavares@ba.estudante.senai.br`)
+  * Estrutura base da arquitetura MVC.
+  * Modelos de negócio e entidades (`App\Model\Indicadores`, `App\Model\Biofiltro` e `App\Model\AmostraAgua`).
+  * Regras de validação de parâmetros e exceções de borda.
+
+* **Pedro Lucas** (`pedrolucaspaz359@gmail.com`)
+  * Controladores e fluxo de rotas da aplicação.
+  * Interface web responsiva em Bootstrap 5.
+  * Suíte de testes unitários automatizados com PHPUnit 11.
+
+---
+
+## Tecnologias Utilizadas
 
 * **Linguagem:** PHP >= 8.4
 * **Interface Web:** HTML5, CSS3, Bootstrap 5
@@ -16,7 +30,7 @@ Este projeto está alinhado ao **Objetivo de Desenvolvimento Sustentável 6 (Ág
 
 ---
 
-##  Algoritmos Implementados
+## Algoritmos Implementados
 
 O sistema conta com algoritmos especializados localizados no namespace `App\Model`:
 
@@ -34,22 +48,3 @@ O sistema conta com algoritmos especializados localizados no namespace `App\Mode
 3. **Entidade de Validação (`App\Model\AmostraAgua`)**:
    * Encapsula os dados físico-químicos da água (pH, turbidez, cloro, condutividade e temperatura) aplicando validações de borda na instanciação.
 
----
-
-##  Estrutura do Projeto
-
-```text
-PROJETO SESI FÍSICA/
-├── qualidade_agua/
-│   ├── Config/          # Configurações gerais da aplicação (configuration.php)
-│   ├── Controller/      # Controladores da interface (QualidadeAguaController.php)
-│   ├── Model/           # Regras de negócio e algoritmos (AmostraAgua, Biofiltro, Indicadores)
-│   ├── tests/           # Suíte de testes unitários PHPUnit
-│   │   ├── AmostraAguaTest.php
-│   │   ├── BiofiltroTest.php
-│   │   └── IndicadoresTest.php
-│   └── view/            # Interfaces e telas do sistema (home.php)
-├── vendor/              # Dependências instaladas pelo Composer
-├── composer.json        # Mapeamento PSR-4 do namespace App\
-├── index.php            # Ponto de entrada da aplicação
-└── README.md            # Documentação técnica do projeto
